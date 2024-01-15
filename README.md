@@ -6,7 +6,7 @@ Create a smart contract that facilitates the swapping of one ERC-20 token for an
 
 ## Design Choices
 
-- To optimize gas usage, prevent reentrancy attacks, and avoid overflow/underflow vulnerabilities, SafeERC20 was used for token transfers.
+- To optimize gas usage, prevent reentrancy attacks, and avoid overflow/underflow vulnerabilities, 'SafeERC20' was used for token transfers.
 - The contract uses a fixed exchange rate that can be customized during contract deployment.
 - An `onlyOwner` based `setExchangeRate` function is provided for fuzz testing and customizing the exchange rate.
 - In `SwapBForA`, if there's a remainder after division by the fixed exchange rate, the excess amount of Token B is returned to the user to ensure a consistent exchange.
