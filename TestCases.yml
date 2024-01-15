@@ -1,0 +1,39 @@
+- TestCaseId: 1
+  TestDescription: accountA swaps 10 tokenA for tokenB.
+  Expected: accountA should receive 10*exchange_rate tokenB, and the tokenSwap's reserve should have 1,000,010 token A after the transaction execution, and (1,000,000 - 10*exchange_rate) of tokenB
+
+- TestCaseId: 2
+  TestDescription: accountA sends 0 tokenA for swapping with tokenB.
+  Expected: The VM should revert the transaction with an error.
+
+- TestCaseId: 3
+  TestDescription: accountA tries to swap more tokenA than available in their account balance.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 4
+  TestDescription: accountA tries to swap tokenA for tokenB but has not provided enough allowance as requested by the token swap smart contract.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 5
+  TestDescription: accountA tries to swap tokenA for tokenB, but the token swap contract doesn't have a sufficient amount of tokenB in the reserve.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 6
+  TestDescription: accountB swaps 25 tokenB for tokenA.
+  Expected: According to the exchange rate, maximum tokenA should be sent to accountB, and any remaining tokenB should be refunded to accountA.
+
+- TestCaseId: 7
+  TestDescription: accountB sends 0 tokenB for swapping with tokenA.
+  Expected: The VM should revert the transaction with an error.
+
+- TestCaseId: 8
+  TestDescription: accountB tries to swap more tokenB than available in their account balance.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 9
+  TestDescription: accountB tries to swap tokenB for tokenA but has not provided enough allowance as requested by the token swap smart contract.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 10
+   TestDescription: accountB tries to swap tokenB for tokenA, but the token swap contract doesn't have a sufficient amount of tokenA in the reserve.
+   Expected: The VM should revert with an error.

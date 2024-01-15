@@ -1,66 +1,28 @@
-## Foundry
+# Token Swap Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Problem Description
 
-Foundry consists of:
+Create a smart contract that facilitates the swapping of one ERC-20 token for another at a predefined exchange rate. The smart contract should include the following features:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Design Choices
 
-## Documentation
+## Security Considerations
 
-https://book.getfoundry.sh/
+## Test Cases
 
-## Usage
 
-### Build
+## Features
 
-```shell
-$ forge build
-```
+- Users can swap Token A for Token B and vice versa.
+- The exchange rate between Token A and Token B is fixed.
+- Implement proper checks to ensure that the swap adheres to the exchange rate.
+- Include events to log swap details.
 
-### Test
+## Requirements
 
-```shell
-$ forge test
-```
+- Implement the smart contract in Solidity.
+- Use the ERC-20 standard for both tokens.
+- Ensure proper error handling and event logging.
+- Implement the swap functionality securely and efficiently.
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+It's just better.
