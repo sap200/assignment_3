@@ -24,7 +24,7 @@ Create a smart contract that facilitates the swapping of one ERC-20 token for an
 
 ## Test Cases
 
-- Test cases can be found in TestCases.yml format, it is written as a YML List format to ensure readability. Here is an example
+- Test cases can be found in `TestCases.yml` file in `YML` format, it is written as a YML List format to ensure readability. Here is an example
 
 ```yml
 - TestCaseId: 1
@@ -35,6 +35,8 @@ Create a smart contract that facilitates the swapping of one ERC-20 token for an
 - TestCaseId is the serial number of test case
 - TestDescription provides comprehensive description of testcase
 - Expected provides the expected output of the testcase
+
+## Test Case Execution Result
 
 ![Test Case result](./Test_Case_Passed_sc.png)
 
