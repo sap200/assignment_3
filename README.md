@@ -6,24 +6,6 @@ Create a smart contract that facilitates the swapping of one ERC-20 token for an
 
 ## Design Choices
 
-- I used SafeERC20 for gas optimization, re-entrancy protection and prevention of overflow and underflow vulnerabilities
-- Fixed exchange rate was used which is customizable during deployment of contract
-- I also used onlyOwner based function to customize exchange rate only for the purpose of fuzzy testing
-- In case of SwapBForA, if the division with fixed exchange rate has some remainder, the remainder amount of token B is sent back to user to ensure consistent exchange
-- The token swap contract should have fixed reserve pool of token for swapping
-
-## Security Considerations
-
-- used safeMath to protect against underflow and overflow vulnerabilities with arithmetic operations
-- used SafeERC20 to protect against re-entrancy protection and gas optimization
-- Inherited Ownable contract of openzeppelin for proper access control for setting exchange rate
-- Used require statement to check for the balance of token A and token B reserve in the contract
-- Used require stament to check for the allowance provided to token swap smart contract for transferring token from user's address to contract address
-- Used require statement to check for the balance of ERC20 tokens in the user's account. It should not be less than allowance.
-- Used safe transfer to protect against re-entrancy attack
-
-## Design Choices
-
 - To optimize gas usage, prevent reentrancy attacks, and avoid overflow/underflow vulnerabilities, SafeERC20 was used for token transfers.
 - The contract uses a fixed exchange rate that can be customized during contract deployment.
 - An onlyOwner-based `setExchangeRate` function is provided for fuzz testing and customizing the exchange rate.
